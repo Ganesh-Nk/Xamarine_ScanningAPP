@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourShoppingAPP.Views.MainPage"
+             Title="Feel Good, Shop Better"
+             BackgroundColor="White"
+             BackgroundImageSource="cartbg.png">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal" Padding="15,10,15,0">
+            <Image Source="menu.png" HeightRequest="25" WidthRequest="25">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMenuClicked"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <StackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
+            <Frame BackgroundColor="#EDE6F0"
+                   CornerRadius="20"
+                   Padding="30"
+                   HasShadow="False"
+                   WidthRequest="200" 
+                   HeightRequest="150"
+                   HorizontalOptions="Center">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <Image Source="scanmob.jpg" HeightRequest="150" WidthRequest="150" />
+                    <Label Text="SCAN BARCODE"
+                           TextColor="Black"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <Grid Grid.Row="2" Padding="10,20,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Image Source="addcart.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBarcodeScannerClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Image Source="cart.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnViewCartClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label x:Name="CartBadgeLabel"
+               Text="0"
+               BackgroundColor="Red"
+               TextColor="White"
+               FontSize="14"
+               FontAttributes="Bold"
+               IsVisible="False"
+               Padding="4"
+               HeightRequest="24"
+               WidthRequest="24"
+               HorizontalOptions="End"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               TranslationX="-10"
+               TranslationY="-5"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

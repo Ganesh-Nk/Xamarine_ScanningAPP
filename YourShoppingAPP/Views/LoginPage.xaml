@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:YourShoppingAPP.ViewModels"
+             x:DataType="viewmodels:LoginViewModel"
+             x:Class="YourShoppingAPP.Views.LoginPage" Title="Let's Connect here..!"
+             BackgroundImageSource="loginlogo3.png">
+    <Grid Padding="40" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="1" Spacing="15">
+            <Frame BackgroundColor="#EDE6F0" CornerRadius="20" Padding="0" HeightRequest="50">
+                <Entry x:Name="CashierIdEntry"
+                       Placeholder="Cashier ID*"
+                       PlaceholderColor="Red"
+                       BackgroundColor="Transparent"
+                       HeightRequest="50"
+                       TextColor="Black"
+                       FontSize="14"
+                       FontAttributes="Italic"
+                       Text="{Binding CashierIdEntry, Mode=TwoWay}" />
+            </Frame>
+            <Frame BackgroundColor="#EDE6F0" CornerRadius="20" Padding="0" HeightRequest="50">
+                <Entry x:Name="PasswordEntry"
+                       Placeholder="Password*"
+                       IsPassword="True"
+                       BackgroundColor="Transparent"
+                       PlaceholderColor="Red"
+                       HeightRequest="50"
+                       FontSize="14"
+                       TextColor="Black"
+                       Text="{Binding PasswordEntry, Mode=TwoWay}" />
+            </Frame>
+
+            <Button Text="LOGIN"
+                    BackgroundColor="#5C3B86"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    Command="{Binding LoginCommand}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

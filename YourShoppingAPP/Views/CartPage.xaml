@@ -1,0 +1,45 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourShoppingAPP.Views.CartPage"
+             Title="Feel Good,Shop Better"
+             BackgroundColor="White">
+    <StackLayout Padding="20">
+        <Label Text="Your Cart" FontSize="24" FontAttributes="Bold" 
+               HorizontalOptions="Center" TextColor="Black" />
+        <ListView x:Name="CartListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Padding="10" Margin="5"
+                               BackgroundColor="White"
+                               CornerRadius="10"
+                               HasShadow="True">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Barcode}" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}" FontSize="16" TextColor="Gray"/>
+                                </StackLayout>
+                                <Button Text="Remove"
+                                        BackgroundColor="Red"
+                                        TextColor="White"
+                                        FontSize="14"
+                                        CornerRadius="8"
+                                        Padding="10"
+                                        Clicked="OnRemoveItemClicked"
+                                        CommandParameter="{Binding Barcode}" />
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label x:Name="TotalItemsLabel"
+               Text="Total Items: 0"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+    </StackLayout>
+</ContentPage>
