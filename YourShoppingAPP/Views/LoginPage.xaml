@@ -4,13 +4,13 @@
              xmlns:viewmodels="clr-namespace:YourShoppingAPP.ViewModels"
              x:DataType="viewmodels:LoginViewModel"
              x:Class="YourShoppingAPP.Views.LoginPage" Title="Let's Connect here..!"
-             BackgroundImageSource="loginlogo3.png">
+             BackgroundImageSource="bgimgcart">
     <Grid Padding="40" RowSpacing="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="150" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <StackLayout Grid.Row="1" Spacing="15">
+        <StackLayout Grid.Row="1" Padding="10" Spacing="25">
             <Frame BackgroundColor="#EDE6F0" CornerRadius="20" Padding="0" HeightRequest="50">
                 <Entry x:Name="CashierIdEntry"
                        Placeholder="Cashier ID*"
@@ -19,7 +19,7 @@
                        HeightRequest="50"
                        TextColor="Black"
                        FontSize="14"
-                       FontAttributes="Italic"
+                       FontAttributes="bold"
                        Text="{Binding CashierIdEntry, Mode=TwoWay}" />
             </Frame>
             <Frame BackgroundColor="#EDE6F0" CornerRadius="20" Padding="0" HeightRequest="50">
@@ -28,6 +28,7 @@
                        IsPassword="True"
                        BackgroundColor="Transparent"
                        PlaceholderColor="Red"
+                       FontAttributes="bold"
                        HeightRequest="50"
                        FontSize="14"
                        TextColor="Black"

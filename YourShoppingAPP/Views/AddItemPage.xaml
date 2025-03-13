@@ -52,7 +52,7 @@
                 </Label>
             </StackLayout>
             <Grid Grid.Column="1">
-                <Image Source="addcart.png" HeightRequest="50" WidthRequest="60">
+                <Image Source="addcart.png" HeightRequest="60" WidthRequest="80">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnViewCartClicked"/>
                     </Image.GestureRecognizers>

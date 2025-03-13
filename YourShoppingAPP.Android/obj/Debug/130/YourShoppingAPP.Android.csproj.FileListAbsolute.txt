@@ -743,3 +743,5 @@ C:\Users\gnakx\source\repos\YourShoppingAPP\YourShoppingAPP.Android\obj\Debug\13
 C:\Users\gnakx\source\repos\YourShoppingAPP\YourShoppingAPP.Android\obj\Debug\130\res\drawable\scanhome.jpg
 C:\Users\gnakx\source\repos\YourShoppingAPP\YourShoppingAPP.Android\obj\Debug\130\res\drawable\scanmob.jpg
 C:\Users\gnakx\source\repos\YourShoppingAPP\YourShoppingAPP.Android\obj\Debug\130\res\drawable\eshop.png
+C:\Users\gnakx\source\repos\YourShoppingAPP\YourShoppingAPP.Android\obj\Debug\130\res\drawable\loginnew.jpg
+C:\Users\gnakx\source\repos\YourShoppingAPP\YourShoppingAPP.Android\obj\Debug\130\res\drawable\barcodescan.png
